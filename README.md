@@ -1,6 +1,6 @@
 # Time-Of-Flight project
 This project is inspired base on Time-of-Flight (ToF) sensors and during Embedded System Programming Project course. It counts the number of people who enters or exits a "room" with slave node. A 16x2 LCD displays the received information on master node. Moreover, the light will automatically be turned on or off depends on the number inside the room.  
-This project aims to learn using RTOS (uC-III) on MCU and Scrum framework.  
+This project aims to learn applying RTOS (uC-III) on MCU and Scrum framework.  
 ## Table of Contents
 <!-- TOC -->
 - [Hardware](#hardware)
@@ -28,4 +28,4 @@ To count human comming in the room, the ultrasonic sensor must be triggered prio
 ## Master node
 The Master first receives the data which is transfered by slave and displays the nubmer of people in the room and inform the LED on or off.  
 ## Installation Instruction
-To replicate this project, all the information is found in `ToF_USER_INSTALL_DOC`. 
+To replicate this project, all the information is found in `ToF_USER_INSTALL_DOC.pdf`  
