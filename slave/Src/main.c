@@ -312,50 +312,50 @@ static void TemperatureTask(void *p_arg)
   }
 }
 
-// static void SendTask(void *p_arg)
-// {
+static void SendTask(void *p_arg)
+{
 
-//   OS_ERR os_err;
-//   uint8_t msg[50];
-//     uint8_t buf[30];
-//     uint8_t test=5;
+  OS_ERR os_err;
+  uint8_t msg[50];
+    uint8_t buf[30];
+    uint8_t test=5;
 
-//   while (DEF_TRUE)
-//   {
-//     OSSemPend(
-//         (OS_SEM *)&sem,
-//         (OS_TICK)0,
-//         (OS_OPT)OS_OPT_PEND_BLOCKING,
-//         (CPU_TS *)NULL,
-//         (OS_ERR *)&os_err);
+  while (DEF_TRUE)
+  {
+    OSSemPend(
+        (OS_SEM *)&sem,
+        (OS_TICK)0,
+        (OS_OPT)OS_OPT_PEND_BLOCKING,
+        (CPU_TS *)NULL,
+        (OS_ERR *)&os_err);
 
-//     /* LED SETUP */
-//     if (count != 0)
-//     {
-//       Set_Pin_Input(GPIOA, GPIO_PIN_4);
-//     }
-//     else
-//     {
-//       Set_Pin_Output(GPIOA, GPIO_PIN_4);
-//       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, 0);
-//     }
-//   /* SEND DATA*/
+    /* LED SETUP */
+    if (count != 0)
+    {
+      Set_Pin_Input(GPIOA, GPIO_PIN_4);
+    }
+    else
+    {
+      Set_Pin_Output(GPIOA, GPIO_PIN_4);
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, 0);
+    }
+  /* SEND DATA*/
 
-//    sprintf(buf,"%5d",count);
-//   HAL_UART_Transmit(&huart3, buf, 5, 100);
+   sprintf(buf,"%5d",count);
+  HAL_UART_Transmit(&huart3, buf, 5, 100);
 
-//    sprintf(msg, "DIS: %d | TEM: %d | C: %d \n\r", Distance, Temperature, count);
-//     HAL_UART_Transmit(&huart2, msg, strlen(msg), 100);
+   sprintf(msg, "DIS: %d | TEM: %d | C: %d \n\r", Distance, Temperature, count);
+    HAL_UART_Transmit(&huart2, msg, strlen(msg), 100);
 
 
 
-//     OSSemPost(
-//         (OS_SEM *)&sem,
-//         (OS_OPT)OS_OPT_POST_1,
-//         (OS_ERR *)&os_err);
-//     OSTimeDlyHMSM(0, 0, 1, 500, OS_OPT_TIME_HMSM_STRICT, &os_err);
-//   }
-// }
+    OSSemPost(
+        (OS_SEM *)&sem,
+        (OS_OPT)OS_OPT_POST_1,
+        (OS_ERR *)&os_err);
+    OSTimeDlyHMSM(0, 0, 1, 500, OS_OPT_TIME_HMSM_STRICT, &os_err);
+  }
+}
 /* USER CODE END 4 */
 
 /**
