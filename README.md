@@ -22,7 +22,7 @@ This project aims to learn applying RTOS (uC-III) on MCU and Scrum framework.
 ## Slave node
 The Slave node presents as an STM32 Nucleo comprising distance sensor and temperature sensor. Slave is used to fetch data and transmit it to Master through MAX3485.  
 ---
->
+>Note
 To count human comming in the room, the ultrasonic sensor must be triggered prior to DS18B20 sensor and in reverse order to subtract people inside. 
 ---  
 ## Master node
