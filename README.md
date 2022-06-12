@@ -11,18 +11,19 @@ This project aims to learn applying RTOS (uC-III) on MCU and Scrum framework.
 <!-- TOC -->
 
 ## Hardware
--[STM32 Nucleo-L152RE](https://www.st.com/en/evaluation-tools/nucleo-l152re.html)  
--[HC-SR04 Distance Sensor](https://datasheetspdf.com/pdf/1380136/ETC/HC-SR04/1)  
--[DS18B20 Water-proof Digital Temperature sensor](https://datasheetspdf.com/pdf/1447575/MaximIntegrated/DS18B20/1)  
--[LCD 16x2](https://www.dfrobot.com/product-135.html)  
--[MAX3485 Transceiver](https://pdf1.alldatasheet.com/datasheet-pdf/view/73221/MAXIM/MAX3485.html)  
+- [STM32 Nucleo-L152RE](https://www.st.com/en/evaluation-tools/nucleo-l152re.html)  
+- [HC-SR04 Distance Sensor](https://datasheetspdf.com/pdf/1380136/ETC/HC-SR04/1)  
+- [DS18B20 Water-proof Digital Temperature sensor](https://datasheetspdf.com/pdf/1447575/MaximIntegrated/DS18B20/1)  
+- [LCD 16x2](https://www.dfrobot.com/product-135.html)  
+- [MAX3485 Transceiver](https://pdf1.alldatasheet.com/datasheet-pdf/view/73221/MAXIM/MAX3485.html)  
 ## Toolchain
--[STM32CubeMX](https://aur.archlinux.org/packages/stm32cubemx/)  
--[Platformio](https://docs.platformio.org/en/latest/core/installation.html) 
+- [STM32CubeMX](https://aur.archlinux.org/packages/stm32cubemx/)  
+- [Platformio](https://docs.platformio.org/en/latest/core/installation.html) 
 ## Slave node
 The Slave node presents as an STM32 Nucleo comprising distance sensor and temperature sensor. Slave is used to fetch data and transmit it to Master through MAX3485.  
+
 ---
->Note
+>Note: 
 To count human comming in the room, the ultrasonic sensor must be triggered prior to DS18B20 sensor and in reverse order to subtract people inside. 
 ---  
 ## Master node
